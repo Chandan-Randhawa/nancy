@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:link, button:visited {
+          background-color: #f44336;
+          color: white;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+        
+        button:hover, button:active {
+          background-color: red;
+        }
+        </style>
+</head>
+<body style = 'margin :auto; margin-left:393px; margin-top:118px'>
+    <h2 style = "margin-top :10px">Sending Whtsapp & Email Automatically !!</h2>
+    <form style ="margin-left:146px; margin-top :15px" action="https://docs.google.com/spreadsheets/d/1-wpcjCh6mEzUvr4OyLUNTmUIbNdWoPUs-SCinnJRuC4/edit#gid=0" target="_blank">
+      <input type="submit" value="Go To Your Excel !!" /> 
+    </form>
+    <form method = "post" target="_blank">
+        {% csrf_token %}
+        <input style="margin-left:128px; margin-top:20px" type="text" placeholder="sheetName" name = 'sheetName' required><br><br>
+        <button style="margin-left:44px" type="submit"  formaction="whtsapp">trigeer whtsapp</button>
+        <button style="margin-left:128px" type="submit" formaction="emaill">trigger email</button>
+    </form>
+</body>
+</html>

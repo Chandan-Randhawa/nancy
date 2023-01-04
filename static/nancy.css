@@ -1,0 +1,26 @@
+.b11 {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto; 
+    margin-top: 10px;
+    margin-left :497px
+}
+.scroll {
+    background-color: #fed9ff;
+    width: 400px;
+    height: 175px;
+    overflow: auto;
+    text-align: justify;
+    padding: 20px;
+    margin-left:358px;
+    margin-right:20px;
+    margin-top: 20px;
+}
+
+

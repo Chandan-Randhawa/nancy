@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "whatsappjj",
+  "private_key_id": "2d500bb72bca55c87062ecf22427a1a3b39f7a8f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDhBoqbKha+pU78\nlDdQadwbLiIDvDqIxnrkjAlvEE/KsYAbL/hRhTY6psDCnYF4ko1xhkDN+VcPeuEA\nGtnZanAwEtCm8BLP8lQqysoQ+ZiOHtoIrkzV22Zdfgx3qspKUeyIM0IcXJ+2ZvI0\n4ou5bzauGktcUJ3yfsKA0BmziH0b5jilMHEbvr9F5q9DZk63V2cfv/7A3DcCjVQW\nkT0SXxVHQgr4AvLylTpLdNSaFvLCH+QbbMWWwfTzmSWxr4QmnPj7GGEVb3bnHSJV\nvE8JuYKfVkUEb9jmYmBUvL4/AuDj8rLDv9IRfKjEwACmRLSg1Cmmn4Yz/v+4VPAz\n0W/sORhpAgMBAAECggEAAI5mYwykFPz8MAvQtL8BuwAG60M5LbCrXtYJ6Vh2OwEB\n0N2PeS2vsk5pmRQS8gT1qnFAHsCgKy+1qCQR/nRstKnjTNh07efB9RzZ4czlWbv8\nslOEsJVuKXINdB2h0YEFO4Yk8TBTz9B4fzm4Uw0erJC5Ya/9xZ55hPKh8ZMhYY5f\njtzb884UoXXPbhbfn2hjXxp48VTJdEg21ZaHOQ7/RViJe2WJSgaOnTmamDr2/8Jr\n0iYKt9Olldn7Ltq3XjzNpw+DwFKF5JNxxFnmkczBHNKnzhiQsj/ppFXJFrhwfeig\n6zorCVz/gIHdZVyOBxEgtNcVYQEsyY80IIuHiv0rEQKBgQDwnlIeKPmsfjAhGs5+\n/VMyuffTqtIJ15wq/SjAdeAm2MiJxPKpJ2sAxmwH6HwCfhTePg5x8tGH/Nenf8q5\nO+KwN7L5jc0ZyRhsSJV3yJvT8HNEC4jJcMfORchkaCdp1pAbvmjGgekTRlSyfsJc\nXwafa1MP2G6RwhriOLhohkMuWQKBgQDvaQu1bISrHxoP4K0roOtGlscv055OCjsS\nVFX8meQDQwu4dwjcc81UfCPF8NOx8Fa/AZA5SgYt+PhflBxS++3sCgs6msdMuWPp\nwm+sPl0XYUaAcTtdnHlh560+QsOKDTkZg75kTV97BzMPwxMAibSR0+xwnreRyLVX\n/7zZIv+YkQKBgQDSOOBx7UbFx7HxGmSTWmxYA1Zcnf/IDZIplOkHzXS7O+dpRqLj\n2saH9NPpzNqbquA8k2c3cvhRoTwg4WuSjpmtb9x0X8lz39fwszGzZ5eNgaSTLKij\npl9K/njoEH9u3sElHCSaWmHyLx5MnKbe4T7+BVyamXNw8W9fekLTP4pucQKBgQDY\nAzPpUiyyKbHeOZ6GCv++BTVb1di0GU8LTsT20fOFbe0ZV23LW0EcxZWRd6XKm0vp\ns4Np7Xx95nJT6tNTnLQjkTxoeFbyxyN7O1B/XRWpjr+KDKC/6fsrd1o9HwhHe37V\noqUa4yUPYIOV6TEv/w/JtClVxB9ljm7xI3JFiOqNwQKBgDC/xc4oz/yWRhocbGtu\nm51onuZti0zr0AWIkbMDaDZI7KzK4+1aL0D4xGe2z0YCXn+WmS9p4AjTDS5I9G5h\nyqcm3t1PgCQVPB0pxxdnIg/YMDgcd+gQrbbNeC8EDdORRh7JFil9p7+C47rF9isM\nMFfB9RCSGcd9ybICWETpVP2L\n-----END PRIVATE KEY-----\n",
+  "client_email": "pharmacytowhtsapp@whatsappjj.iam.gserviceaccount.com",
+  "client_id": "117380147661654833372",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pharmacytowhtsapp%40whatsappjj.iam.gserviceaccount.com"
+}

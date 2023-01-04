@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'nancy.css' %}">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sent Mail</title>
+    
+</head>
+<body>
+    <h1 style = 'font-size:52px; margin: auto; margin-left :321px' >Mail Has been Sent !!!</h1>
+    <h2 style = 'font-size:25px; margin: auto; margin-left :428px' >Sender's List is below</h2>
+
+    <div class = 'scroll'>
+        {% for x in li  %}
+        <li> {{x}}<br><br> </li>
+        {% endfor %}
+        
+    </div>
+        
+    <div>
+        <a class="b11" href="{% url 'index' %}">send New Message</a>
+    </div> 
+</body>
+</html>

@@ -7,3 +7,4 @@ requests==2.26.0
 uvicorn==0.15.0
 pywhatkit==5.3
 gspread==5.7.2
+xvfbwrapper==0.2.9

@@ -13,7 +13,7 @@ def index(request):
 async def whtsapp(request):
     if request.method =='POST':
         wksht = request.POST.get('sheetName')
-        gc = gspread.service_account(filename=r'C:\Users\Randhawa\Desktop\DR JJ\nancy_dj\nancy_wht_eml_dj\sheetAuth2.json')
+        gc = gspread.service_account(filename='sheetAuth2.json')
 
         wks = gc.open('PRIVATE OPD DATA').worksheet(f'{wksht}')
         li = []
@@ -38,7 +38,7 @@ async def whtsapp(request):
 def emaill(request):
     if request.method =='POST':
         wksht = request.POST.get('sheetName')
-        gc = gspread.service_account(filename=r'C:\Users\Randhawa\Desktop\DR JJ\nancy_dj\nancy_wht_eml_dj\sheetAuth2.json')
+        gc = gspread.service_account(filename='sheetAuth2.json')
 
         wks = gc.open('PRIVATE OPD DATA').worksheet(f'{wksht}')
         li = []

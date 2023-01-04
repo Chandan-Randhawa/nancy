@@ -1,9 +1,9 @@
 from django.shortcuts import render
 import gspread
-# import pywhatkit
+import pywhatkit
 from django.core.mail import send_mail , EmailMessage
 
-from xvfbwrapper import Xvfb
+
 
 # Create your views here.
 
@@ -20,13 +20,7 @@ async def whtsapp(request):
         for i in wks.get_all_records():
             if i['Contact No'] != '':
                 # print(i.get('Message'))
-                vdisplay = Xvfb(width=1280, height=740)
-                vdisplay.start()
-                try:
-                    print('hihi')
-                    # pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
-                finally:
-                    vdisplay.stop()
+                pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
                 li.append(['Contact No'])
             elif i['Contact No'] == '':
                 break

@@ -2,8 +2,6 @@ from django.shortcuts import render
 import gspread
 import pywhatkit
 from django.core.mail import send_mail , EmailMessage
-from asgiref.sync import sync_to_async
-import asyncio
 
 
 

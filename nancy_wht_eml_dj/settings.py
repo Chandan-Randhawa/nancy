@@ -133,3 +133,4 @@ EMAIL_HOST_USER = 'opd.coordinator@cmcludhiana.in'
 EMAIL_HOST_PASSWORD = 'oldqhnhvldzqnykm'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+CSRF_TRUSTED_ORIGINS = ['https://web-production-0e0f.up.railway.app','https://*.127.0.0.1']

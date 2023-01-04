@@ -2,7 +2,9 @@ from django.shortcuts import render
 import gspread
 import pywhatkit
 from django.core.mail import send_mail , EmailMessage
+import os
 
+os.environ['DISPLAY'] = ':0'
 
 
 # Create your views here.

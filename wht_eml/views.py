@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import gspread
-import pywhatkit
+# import pywhatkit
 from django.core.mail import send_mail , EmailMessage
 
 from xvfbwrapper import Xvfb
@@ -23,7 +23,8 @@ async def whtsapp(request):
                 vdisplay = Xvfb(width=1280, height=740)
                 vdisplay.start()
                 try:
-                    pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
+                    print('hihi')
+                    # pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
                 finally:
                     vdisplay.stop()
                 li.append(['Contact No'])

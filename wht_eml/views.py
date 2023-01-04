@@ -23,7 +23,7 @@ async def whtsapp(request):
             if i['Contact No'] != '':
                 print(i.get('Message'))
                 # pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
-                pywhatkit.sendwhatmsg_instantly(phone_no=f"+919501711001", message=i.get('Message'),tab_close=True)
+                pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
                 li.append(['Contact No'])
             elif i['Contact No'] == '':
                 break
@@ -40,9 +40,9 @@ def emaill(request):
         wks = gc.open('PRIVATE OPD DATA').worksheet(f'{wksht}')
         li = []
         for i in wks.get_all_records():
-            if i['Email Id'] != '':
+            if i['Email Id'] != '': 
                 msg =  i.get('Message')
-                email = EmailMessage( body=  msg , from_email= 'zsrandhawa@gmail.com' , to= ['bkrandhawa1970@gmail.com'])
+                email = EmailMessage( body=  msg , from_email= 'opd.coordinator@cmcludhiana.in' , to= [i['Email Id']])
                 email.send()
                 li.append(i['Email Id'])
 

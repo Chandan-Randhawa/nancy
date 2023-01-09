@@ -1,1 +1,0 @@
-web: gunicorn nancy_wht_eml_dj.wsgi --log-file -

@@ -11,18 +11,23 @@
     
 </head>
 <body>
-    <h1 style = 'font-size:52px; margin: auto; margin-left :321px' >Mail Has been Sent !!!</h1>
-    <h2 style = 'font-size:25px; margin: auto; margin-left :428px' >Sender's List is below</h2>
+    <h1 style = 'font-size:52px; margin: auto; margin-left :25px' >Mail Has been Sent !!!</h1>
+    <h2 style = 'font-size:25px; margin: auto; margin-left :127px' >Sender's List is below</h2>
 
     <div class = 'scroll'>
         {% for x in li  %}
         <li> {{x}}<br><br> </li>
-        {% endfor %}
-        
+        {% endfor %} 
     </div>
-    <div>
-        <a class="b11" href="{% url 'index' %}">send New Message</a>
-    </div> 
+
+    <h1 style = 'font-size:52px; margin: auto; margin-left :736px ; margin-top:-325px' >Mail Nottttt Sent !!!</h1>
+    <h2 style = 'font-size:25px; margin: auto; margin-left :823px; margin-top:-3px' >NOT sent Sender's List</h2>
+
+    <div class = 'scroll_2'>
+        {% for x in ln  %}
+        <li> {{x}}<br><br> </li>
+        {% endfor %} 
+    </div>
 
 </body>
 </html>

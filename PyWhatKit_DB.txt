@@ -568,3 +568,23 @@ Time: 13:10
 Phone Number: +919501711001
 Message: Dear Dr.Joseph John, This is to share your individual *Private OPD* update.*Date: 02-Jan-2023* MondayNo of *Private Patients* registered for you: **No of Patients billed for *Pharmacy*: *0*No of Patients billed for *Laboratory*: *0**Total Patients* registered in *Private OPD* today: **_Thank you for your cooperation and we need your support in improving the CMCL footfall of patients.__*OPD Management Team*_
 --------------------
+Date: 13/1/2023
+Time: 18:0
+Phone Number: +919872968689
+Message: Dear Dr.Emy thomas, This is to share your individual *Private OPD* update.*Date: 12-Jan-2023* ThursdayNo of *Private Patients* registered for you: *1*No of Patients billed for *Pharmacy*: *0*No of Patients billed for *Laboratory*: *1**Total Patients* registered in *Private OPD* today: **_Thank you for your cooperation and we need your support in improving the CMCL footfall of patients.__*OPD Management Team*_
+--------------------
+Date: 13/1/2023
+Time: 18:0
+Phone Number: +919872968689
+Message: Dear Dr.Sunita goyal, This is to share your individual *Private OPD* update.*Date: 12-Jan-2023* ThursdayNo of *Private Patients* registered for you: *2*No of Patients billed for *Pharmacy*: *0*No of Patients billed for *Laboratory*: *0**Total Patients* registered in *Private OPD* today: **_Thank you for your cooperation and we need your support in improving the CMCL footfall of patients.__*OPD Management Team*_
+--------------------
+Date: 13/1/2023
+Time: 18:1
+Phone Number: +919872968689
+Message: Dear Dr.Bobby john, This is to share your individual *Private OPD* update.*Date: 12-Jan-2023* ThursdayNo of *Private Patients* registered for you: *1*No of Patients billed for *Pharmacy*: *0*No of Patients billed for *Laboratory*: *0**Total Patients* registered in *Private OPD* today: **_Thank you for your cooperation and we need your support in improving the CMCL footfall of patients.__*OPD Management Team*_
+--------------------
+Date: 13/1/2023
+Time: 18:1
+Phone Number: +919872968689
+Message: Dear Dr.Mary john, This is to share your individual *Private OPD* update.*Date: 12-Jan-2023* ThursdayNo of *Private Patients* registered for you: *1*No of Patients billed for *Pharmacy*: *0*No of Patients billed for *Laboratory*: *0**Total Patients* registered in *Private OPD* today: **_Thank you for your cooperation and we need your support in improving the CMCL footfall of patients.__*OPD Management Team*_
+--------------------

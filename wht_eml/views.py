@@ -1,7 +1,11 @@
 from django.shortcuts import render
 import gspread
 import pywhatkit
-from django.core.mail import EmailMessage
+import smtplib as s
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email.mime.text import MIMEText
+from email import encoders
 
 # Create your views here.
 
@@ -19,7 +23,7 @@ def whtsapp(request):
         for i in wks.get_all_records():
             if i['Contact No'] != '':
                 try:
-                    pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
+                    pywhatkit.sendwhatmsg_instantly(phone_no=f"+919872968689", message=i.get('Message'),tab_close=True)
                     li.append(i["Doctor's Name"])
                 except Exception as e:
                     print(e)
@@ -43,10 +47,18 @@ def emaill(request):
         ln = []
         for i in wks.get_all_records():
             if i['Email Id'] != '': 
-                msg =  i.get('Message')
+                msgg =  i.get('Message')
                 try:
-                    email = EmailMessage(body= msg , from_email= 'nancy.choudhary@cmcludhiana.in' , to= [i['Email Id']])
-                    email.send()
+                    msg = MIMEMultipart()
+                    msg['From'] = 'nancy.choudhary@cmcludhiana.in'
+                    msg['To'] = i['Email Id']
+                    # msg['Subject'] = 'Email with multiple attachments'
+                    msg.attach(MIMEText(msgg))
+                    server = s.SMTP('smtp.gmail.com', 587)
+                    server.starttls()
+                    server.login('nancy.choudhary@cmcludhiana.in', 'ywnnawkrtdmxutho')
+                    server.sendmail('nancy.choudhary@cmcludhiana.in', i['Email Id'], msg.as_string())
+                    server.quit()
                     li.append(i['Email Id'])
                     print(f'mail has been send to {i["Email Id"]}')
                 except Exception as e:

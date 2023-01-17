@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import gspread
 import pywhatkit
-import smtplib as s
+import smtplib as s 
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
@@ -23,7 +23,7 @@ def whtsapp(request):
         for i in wks.get_all_records():
             if i['Contact No'] != '':
                 try:
-                    pywhatkit.sendwhatmsg_instantly(phone_no=f"+919872968689", message=i.get('Message'),tab_close=True)
+                    pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
                     li.append(i["Doctor's Name"])
                 except Exception as e:
                     print(e)
@@ -52,22 +52,24 @@ def emaill(request):
                     msg = MIMEMultipart()
                     msg['From'] = 'nancy.choudhary@cmcludhiana.in'
                     msg['To'] = i['Email Id']
-                    # msg['Subject'] = 'Email with multiple attachments'
+                    msg['Subject'] = 'Private Opd Census'
                     msg.attach(MIMEText(msgg))
-                    server = s.SMTP('smtp.gmail.com', 587)
-                    server.starttls()
-                    server.login('nancy.choudhary@cmcludhiana.in', 'ywnnawkrtdmxutho')
-                    server.sendmail('nancy.choudhary@cmcludhiana.in', i['Email Id'], msg.as_string())
-                    server.quit()
+                    ob = s.SMTP('smtp.gmail.com', 587)
+                    ob.ehlo()
+                    ob.starttls()
+                    ob.login(msg['From'], 'ywnnawkrtdmxutho')
+                    ob.sendmail(msg['From'], msg['To'], msg.as_string())
+                    ob.quit()
                     li.append(i['Email Id'])
                     print(f'mail has been send to {i["Email Id"]}')
                 except Exception as e:
+                    print(e)
                     ln.append(i['Email Id'])
                     print(f"maillllll has not sent to {i['Email Id']}")
             elif i['Email Id'] == '':
                 break
-        context = {'li':li , 'ln':ln}
-        return render (request, 'sentt_email.html' , context )
+        contextt = {'li':li , 'ln':ln}
+        return render (request, 'sentt_email.html' , contextt )
 
     else :
         return render(request , 'sentt_email.html')

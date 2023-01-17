@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import gspread
 import pywhatkit
-import smtplib as s 
+import smtplib , ssl
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
@@ -23,7 +23,7 @@ def whtsapp(request):
         for i in wks.get_all_records():
             if i['Contact No'] != '':
                 try:
-                    pywhatkit.sendwhatmsg_instantly(phone_no=f"+91{i['Contact No']}", message=i.get('Message'),tab_close=True)
+                    pywhatkit.sendwhatmsg_instantly(phone_no=f"+919872968689", message=i.get('Message'),tab_close=True)
                     li.append(i["Doctor's Name"])
                 except Exception as e:
                     print(e)
@@ -54,12 +54,12 @@ def emaill(request):
                     msg['To'] = i['Email Id']
                     msg['Subject'] = 'Private Opd Census'
                     msg.attach(MIMEText(msgg))
-                    ob = s.SMTP('smtp.gmail.com', 587)
-                    ob.ehlo()
-                    ob.starttls()
-                    ob.login(msg['From'], 'ywnnawkrtdmxutho')
-                    ob.sendmail(msg['From'], msg['To'], msg.as_string())
-                    ob.quit()
+                    context = ssl.create_default_context()
+                    with smtplib.SMTP_SSL("smtp.gmail.com" , 465 , context=context) as server:
+                        server.ehlo()
+                        server.login(msg['From'], 'ywnnawkrtdmxutho')
+                        server.sendmail(msg['From'], msg['To'], msg.as_string())
+                        server.quit()
                     li.append(i['Email Id'])
                     print(f'mail has been send to {i["Email Id"]}')
                 except Exception as e:

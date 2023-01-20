@@ -1,11 +1,16 @@
 from django.shortcuts import render
 import gspread
-import pywhatkit
 import smtplib , ssl
 from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
-from email import encoders
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from time import sleep
+import urllib.parse
+
 
 # Create your views here.
 
@@ -18,12 +23,36 @@ def whtsapp(request):
         gc = gspread.service_account(filename='sheetAuth2.json')
 
         wks = gc.open('PRIVATE OPD DATA').worksheet(f'{wksht}')
+        chrome_options = Options()
+        chrome_options.add_argument('C:\chromedriver')
+        driver = webdriver.Chrome(options=chrome_options)
+        wait = WebDriverWait(driver, 50)
+        print("SCAN YOUR QR CODE FOR WHATSAPP WEB IF DISPLAYED")
+        driver.get("https://web.whatsapp.com/")
+        driver.maximize_window()
+        print("QR CODE SCANNED")
         li = []
         ln =[]
         for i in wks.get_all_records():
             if i['Contact No'] != '':
                 try:
-                    pywhatkit.sendwhatmsg_instantly(phone_no=f"+919872968689", message=i.get('Message'),tab_close=True)
+                    # Reference : https://faq.whatsapp.com/en/android/26000030/
+                    print("In send_message_to_unsavaed_contact method") 
+                    params = {'phone': str(f"91{i['Contact No']}"), 'text': str(i.get('Message'))}
+                    end = urllib.parse.urlencode(params)
+                    final_url = 'https://web.whatsapp.com/' + 'send?' + end
+                    print(final_url)
+                    driver.get(final_url)
+                    WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//div[@title = "Menu"]')))
+                    print("Page loaded successfully.")
+                    
+                    sleep(2)
+                    WebDriverWait(driver, 50).until(EC.presence_of_element_located((By.XPATH, '//span[@data-icon="send"]')))
+                    wait.until(EC.presence_of_element_located((By.XPATH, '//span[@data-icon="send"]'))).click()
+                 
+                    print("Message sent successfully.")
+                    sleep(4)
+                    # pywhatkit.sendwhatmsg_instantly(phone_no=f"+919872968689", message=i.get('Message'),tab_close=True)
                     li.append(i["Doctor's Name"])
                 except Exception as e:
                     print(e)

@@ -21,14 +21,14 @@
         </style>
 </head>
 <body style = 'margin :auto; margin-left:393px; margin-top:118px'>
-    <h2 style = "margin-top :10px">Sending Whtsapp & Email Automatically !!</h2>
+    <h2 style = "margin-top :10px">Sending WhatsApp & Email Automatically !!</h2>
     <form style ="margin-left:146px; margin-top :15px" action="https://docs.google.com/spreadsheets/d/1-wpcjCh6mEzUvr4OyLUNTmUIbNdWoPUs-SCinnJRuC4/edit#gid=0" target="_blank">
       <input type="submit" value="Go To Your Excel !!" /> 
     </form>
     <form method = "post" target="_blank">
         {% csrf_token %}
         <input style="margin-left:128px; margin-top:20px" type="text" placeholder="sheetName" name = 'sheetName' required><br><br>
-        <button style="margin-left:44px" type="submit"  formaction="whtsapp">Trigger WhtsApp</button>
+        <button style="margin-left:44px" type="submit"  formaction="whtsapp">Trigger WhatsApp</button>
         <button style="margin-left:128px" type="submit" formaction="emaill">Trigger Email</button>
     </form>
 </body>

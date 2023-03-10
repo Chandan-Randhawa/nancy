@@ -79,14 +79,14 @@ def emaill(request):
                 msgg =  i.get('Message')
                 try:
                     msg = MIMEMultipart()
-                    msg['From'] = 'nancy.choudhary@cmcludhiana.in'
+                    msg['From'] = ''
                     msg['To'] = i['Email Id']
                     msg['Subject'] = 'Private Opd Census'
                     msg.attach(MIMEText(msgg))
                     context = ssl.create_default_context()
                     with smtplib.SMTP_SSL("smtp.gmail.com" , 465 , context=context) as server:
                         server.ehlo()
-                        server.login(msg['From'], 'ywnnawkrtdmxutho')
+                        server.login(msg['From'], '')
                         server.sendmail(msg['From'], msg['To'], msg.as_string())
                         server.quit()
                     li.append(i['Email Id'])

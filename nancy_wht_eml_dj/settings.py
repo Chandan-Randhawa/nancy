@@ -134,12 +134,3 @@ STATICFILES_DIRS = [
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 
-# EMAIL_HOST_USER = 'opd.coordinator@cmcludhiana.in'
-# EMAIL_HOST_PASSWORD = 'oldqhnhvldzqnykm'
-
-
-# EMAIL_HOST_USER = 'zsrandhawa@gmail.com'
-# EMAIL_HOST_PASSWORD = 'amjmbtnkcojwlaqa'
-
-# EMAIL_HOST_USER = 'dataanalyst1.icmrcovid19@cmcludhiana.in'
-# EMAIL_HOST_PASSWORD = 'ztjlhkearofqcwke'
